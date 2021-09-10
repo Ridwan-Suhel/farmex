@@ -118,7 +118,8 @@ card area end
  about area start 
 -----------------*/
 .about-area{
-	padding: 70px 0px;
+	padding-top: 70px;
+	padding-bottom: 40px;
 	background: #F5F0E9;
 }
 .about-area .about-img{
