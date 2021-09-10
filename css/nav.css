@@ -1,0 +1,197 @@
+.top-header{
+	position: sticky;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0 auto;
+	z-index: 999;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+	/*height: 100px;*/
+	padding: 20px 0px;
+}
+
+/*those class for autohide when scroll >= 0 class will add in top element like header */
+.scrolled-down{
+  transform:translateY(-100%); 
+  transition: all 0.3s ease-in-out;
+  border-bottom: 1px solid #ddd;
+}
+.scrolled-up{
+  transform:translateY(0); 
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+.nav-container{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.nav-container .logo{
+	width: 180px;
+}
+
+.main-navbar ul{
+	list-style-type: none;
+	display: flex;
+	margin-bottom: 0;
+}
+
+.main-navbar ul li{
+	margin-left: 30px;
+}
+
+.main-navbar ul li a{
+	text-decoration: none;
+	color: #3B3B3B;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+/*this is for menu active class when someone click a list of nav there will be add a class active*/
+.main-navbar ul li.active a{
+	color: #49A760;
+}
+
+.main-navbar ul li a:hover{
+	color: #49A760;
+}
+
+
+/*-----main hamburger/toggle wrapper-----*/
+.toggle-bar{
+	position:  relative;
+	width: 40px;
+	height: 40px;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all .5s ease-in-out;
+	display: none; /*--Generally it will disappear. use display flex/block in your media width when u need--*/
+	z-index: 9999;
+}
+
+
+/*-------toggle icon style-------------*/
+.toggle-bar .toggle-icon{
+	width: 30px;
+	height: 4px;
+	background: #333;
+	border-radius: 5px;
+	box-shadow:  0 1px 3px #4caf50a1;
+	transition: all .5s ease-in-out;
+}
+
+.toggle-bar .toggle-icon::before,
+.toggle-bar .toggle-icon::after{
+	content: '';
+	position: absolute;
+	width: 30px;
+	height: 4px;
+	background: #333;
+	border-radius: 5px;
+	box-shadow:  0 1px 3px #4caf50a1;
+	transition: all .5s ease-in-out;
+}
+
+.toggle-bar .toggle-icon::before{
+	transform: translateY(-9px);
+}
+
+.toggle-bar .toggle-icon::after{
+	transform: translateY(9px);
+}
+
+
+/*--------Toggle animation // when someone click toggle-bar there will be add a class open--------------*/
+.toggle-bar.open .toggle-icon{
+	transform: translateX(-28px);
+	background: transparent;
+	box-shadow: none;
+}
+
+.toggle-bar.open .toggle-icon::before{
+	transform: rotate(45deg) translate(20px, -20px);
+}
+
+.toggle-bar.open .toggle-icon::after{
+	transform: rotate(-45deg) translate(20px, 20px);
+}
+
+
+@media(max-width: 767px){
+	.toggle-bar{
+		display: flex; /*--It was display none. now i need to appear--*/
+	}
+
+	.main-navbar{
+	position: absolute;
+    top:100%;
+    left: 0; /*--use left 50% for diferent look or animation (2)--*/
+    right: 0;
+    background: #0d0d0df5;
+    padding: 0px;
+    border-top: .5px solid #fff;
+    transition: all 0.3s ease-in-out;
+    z-index: 999;
+
+    /*visibility: hidden;
+    opacity: 0;*/ /*--we can use this method for diferent look or animation (2)--*/
+
+    /*--this present design of the navbar with polygon animation (1)--*/
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+	}
+
+	/*--when someone click toggle-bar/hamburger then a class 'active' will add on main-navbar--*/
+	.main-navbar.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+    /*left: 25%;
+    visibility: visible;
+    opacity: 1;*/ /*--we can use this method for diferent look or animation (2)--*/
+	}
+
+	.main-navbar ul{
+		flex-direction: column;
+		padding: 0px;
+	}
+
+	.main-navbar ul li{
+		margin-left: 0px;
+		padding-left:  15px;
+		border-bottom: .5px solid #fff;
+	}
+
+	.main-navbar ul li:last-child{
+		border-bottom: 0px;
+	}
+
+	.main-navbar ul li a{
+		display: block;
+		padding: 15px 0px;
+		color: #fff;
+	}
+
+}
+
+@media (max-width: 320px) {
+	.toggle-bar .toggle-icon{
+		width: 25px;
+		height: 2px;
+		box-shadow:  0 1px 2px rgba(255, 101, 47, 0.2);
+	}
+
+	.toggle-bar .toggle-icon::before,
+	.toggle-bar .toggle-icon::after{
+		width: 25px;
+		height: 2px;
+		box-shadow:  0 1px 2px rgba(255, 101, 47, 0.2);
+	}
+
+}

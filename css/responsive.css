@@ -1,0 +1,104 @@
+@media (max-width: 991px) {
+    .hero-card-area .hero-card-wrapper .card-content {
+        padding: 20px 15px;
+    }
+    .about-area .about-content-wrapper h4 {
+        margin-top: 5px;
+    }
+    .about-area .about-content-wrapper p {
+        margin: 8px 0px;
+    }
+    .about-area .about-content-wrapper .about-more-info {
+        margin: 0px 0px;
+    }
+    .about-area .btn-wrapper .btn {
+        width: 100%;
+        margin-top: 10px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .service-area .service-box {
+        padding: 35px 20px;
+    }
+    .quality-content {
+        margin-right: 0px;
+    }
+
+}
+
+@media (max-width: 767px) {
+    .hero-card-area .hero-card-wrapper .card-content {
+        padding: 20px 15px;
+    }
+    .hero-area {
+        height: auto;
+        padding: 90px 0px;
+    }
+    .hero-area .hero-content {
+        margin-top: 0px;
+    }
+    .hero-area .hero-content h1 {
+        font-size: 45px;
+    }
+    .hero-main-wrapper {
+        margin-top: 0px;
+    }
+    .hero-card-area {
+        padding-top: 70px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-area .about-content-wrapper h4 {
+        font-size: 24px;
+    }
+    .about-area .about-content-wrapper .about-more-info li{
+        margin-top: 15px;
+    }
+    .service-area .service-box h4 {
+        font-size: 24px;
+    }
+    .service-area .service-box .service-item .serv-content h5 {
+        font-size: 20px;
+    }
+    .offer-box {
+        margin-top: 25px;
+    }
+    .offer-box p {
+        margin-top: 10px;
+    }
+    .text-center h4 {
+        font-size: 24px;
+    }
+    .title span {
+        font-size: 13px;
+    }
+    .quality-content h4 {
+        font-size: 24px;
+    }
+    .quality-content .btn-wrapper .btn-yellow {
+        margin-left: 0px;
+    }
+    .testimonial-area .title h4 {
+        font-size: 24px;
+    }
+    .testimonial-area .title span {
+        font-size: 13px;
+    }
+
+
+}
+
+@media (max-width: 374px) {
+    .btn-wrapper .btn{
+        width: 100%;
+        margin-top: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+    .about-area .about-content-wrapper .about-more-info li .integer {
+        font-size: 22px;
+    }
+    
+}
